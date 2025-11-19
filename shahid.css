@@ -348,103 +348,88 @@ form .btn2{
     }
 } */
  /* ---------------- MOBILE FULL LAYOUT FIX ---------------- */
+/* ---------------- MOBILE RESPONSIVE FIX ---------------- */
 @media only screen and (max-width: 600px){
-
-    *{
-        margin: -5px;
-        padding: 0;
-    }
 
     body, html{
         overflow-x: hidden;
     }
 
-    /* HEADER IMAGE FIX */
+    /* HEADER IMAGE (your main background image) */
     #header{
-        height: 80vh;
-        background-image: url('mobail photo-artguru.jpeg');
+        height: 90vh;
+        background-image: url("mobail photo-artguru.jpeg");
         background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
+        background-position: center top -280px; /* face नीचे जाएगा */
     }
 
-    /* NAV HIDE – MENU BUTTON SHOW LATER */
+    /* NAV HIDE */
     nav ul{
         display: none;
     }
     nav{
         justify-content: center;
-        padding: 15px 0;
     }
 
-    /* TEXT BELOW IMAGE FIX */
+    /* HEADER TEXT FIX */
     .header-text{
-        margin-top: 65%;      /* automatic safe position */
+        margin-top: 55%;  /* image ke upar safe position */
         text-align: center;
-        padding: 0px 10px;
+        position: relative;
     }
+
     .header-text h1{
-        font-size: 26px;
-        position: absolute;
-    right: 213px;
-    top: 150px;
+        font-size: 28px;
+        margin-bottom: 5px;
     }
+
     .header-text p{
-        position: absolute;
-    right: 54px;
-    top: 130px; 
-        padding: 124px 230px 0px 0px;
         font-size: 32px;
         line-height: 36px;
-        margin-top: 5px;
     }
 
-    /* REMOVE EXTRA SPACE BELOW HEADER */
+    /* REMOVE EXTRA GAP BEFORE ABOUT */
     #about{
-        margin-top: -40px;      /* extra gap REMOVE */
-        padding-top: 20px;
+        margin-top: -20px;
+        padding-top: 0;
     }
 
-    /* ABOUT SECTION FIX */
+    /* ABOUT FIX */
     .row{
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
-    .about-col-1,
-    .about-col-2{
+    .about-col-1, .about-col-2{
         flex-basis: 100%;
+        margin-bottom: 20px;
     }
     .sub-title{
-        font-size: 32px;
-        margin-bottom: 15px;
+        font-size: 36px;
     }
 
-    /* SERVICES GRID FIX */
+    /* SERVICES - 1 COLUMN */
     .services-list{
         grid-template-columns: 1fr;
-        margin-top: 20px;
         gap: 20px;
     }
 
-    /* PORTFOLIO GRID FIX */
+    /* PORTFOLIO - 1 COLUMN */
     .work-list{
         grid-template-columns: 1fr;
-        margin-top: 20px;
+        gap: 20px;
     }
 
-    /* CONTACT */
+    /* CONTACT - center aligned */
     .contact-left,
     .contact-right{
         flex-basis: 100%;
         text-align: center;
     }
-    .logo{
-      margin-right: 231px;
-    }
 }
+
 #msg{
     color: #61b752;
     margin-top: -40px;
     display: block;
+
 }
